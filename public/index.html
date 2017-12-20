@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Joseph Ruggieri</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- My Styling -->
+    <link rel="stylesheet" href="/assets/style.css">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- queries -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+</head>
+
+<body>
+    <div class="container">
+        <header class="main_h">
+            <div class="row">
+                <a class="logo" href="#">J/R</a>
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href=".sec01">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- / row -->
+        </header>
+    </div>
+    <div class="container2">
+        <video loop muted autoplay poster="assets/vid.png" class="fullscreen-bg__video">
+            <source src="assets/vid.mp4" type="video/webm">
+        </video>
+        <div class="statement">
+            <h1 class="sec01">MISSION STATEMENT</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, recusandae, at, labore velit eligendi amet nobis repellat natus sequi sint consectetur excepturi doloribus vero provident consequuntur accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti voluptates facilis repudiandae similique dolore quaerat architecto perspiciatis officiis dolor ullam expedita suscipit neque minima rem praesentium inventore ab officia quos dignissimos.</p>
+        </div>
+    </div>
+    <!-- javascript/logic -->
+    <script type="text/javascript" src="assets/javascript.js">
+    </script>
+    <script>
+    $(document).ready(function() {
+
+
+
+        // $(window).hover(
+        //            function(){
+        //               $('.video').addClass('sticky');
+        //            },
+        //            function(){
+        //                $('.main_h').removeClass('sticky');
+        //            });
+
+        $(window).hover(function() {
+            $('.main_h').addClass('sticky');
+        }, function() {
+            $('.main_h').removeClass('sticky');
+        })
+
+        $(window).mouseenter(function() {
+            $('.main_h').addClass('sticky');
+        }).mouseleave(function() {
+            if (!$('.main_h').hasClass('active')) {
+                $('.main_h').removeClass('sticky');
+            }
+        });
+
+
+
+
+        // Mobile Navigation
+        $('.mobile-toggle').click(function() {
+            if ($('.main_h').hasClass('open-nav')) {
+                $('.main_h').removeClass('open-nav');
+            } else {
+                $('.main_h').addClass('open-nav');
+            }
+        });
+
+        $('.main_h li a').click(function() {
+            if ($('.main_h').hasClass('open-nav')) {
+                $('.navigation').removeClass('open-nav');
+                $('.main_h').removeClass('open-nav');
+            }
+        });
+
+        // Navigation Scroll - ljepo radi materem
+        $('nav a').click(function(event) {
+            var id = $(this).attr("href");
+            var offset = 70;
+            var target = $(id).offset().top - offset;
+            $('html, body').animate({
+                scrollTop: target
+            }, 500);
+            event.preventDefault();
+        });
+
+    });
+    </script>
+</body>
+
+</html>

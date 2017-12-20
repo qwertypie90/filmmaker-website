@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>About</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- My Styling -->
+    <link rel="stylesheet" href="/assets/style.css">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+        <header class="main_h">
+            <div class="row">
+                <a class="logo" href="#">J/R</a>
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- / row -->
+        </header>
+        <div class="container2">
+            <div class="heroA">           
+            <div id="bio">
+                <h1>ABOUT</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, recusandae, at, labore velit eligendi amet nobis repellat natus sequi sint consectetur excepturi doloribus vero provident consequuntur accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti voluptates facilis repudiandae similique dolore quaerat architecto perspiciatis officiis dolor ullam expedita suscipit neque minima rem praesentium inventore ab officia quos dignissimos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- javascript/logic -->
+        <script type="text/javascript" src="assets/javascript.js">
+        </script>
+        <script>
+// $(window).hover(function(){
+//     $('.main_h').addClass('sticky');
+// }, function(){
+//     $('.main_h').removeClass('sticky');
+// })
+
+$(window).mouseenter(function() {
+    $('.main_h').addClass('sticky');  
+}).mouseleave(function() {      
+    if(!$('.main_h').hasClass('active')){
+        $('.main_h').removeClass('sticky');
+    }
+});
+
+</script>
+</body>
+
+</html>
