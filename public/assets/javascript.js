@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-// menu bar appear and disappear
-$(window).mouseenter(function() {
-    $('.main_h').addClass('sticky');  
-}).mouseleave(function() {      
-    if(!$('.main_h').hasClass('active')){
-        $('.main_h').removeClass('sticky');
-    }
-});
+    // menu bar appear and disappear
+    $(window).mouseenter(function() {
+        $('.main_h').addClass('sticky');
+    }).mouseleave(function() {
+        if (!$('.main_h').hasClass('active')) {
+            $('.main_h').removeClass('sticky');
+        }
+    });
 
     // Mobile Navigation
     $('.mobile-toggle').click(function() {
